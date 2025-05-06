@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Level</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #nav-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999;
+    }
+    #nav-widget button {
+      background: rgba(255,255,255,0.8);
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body class="centered">
+  <img src="assets/level1.jpg" alt="Level 1" class="level-btn" onclick="location.href='level1.html'" >
+  <img src="assets/level2.jpg" alt="Level 2" class="level-btn" onclick="location.href='level2.html'" >
+  <img src="assets/level3.jpg" alt="Level 3" class="level-btn" onclick="location.href='level3.html'" >
+
+  <div id="nav-widget">
+    <button onclick="window.location.href='index.html'">Intro</button>
+    <button onclick="window.location.href='levels.html'">Levels</button>
+    <button onclick="window.location.href='level1.html'">Level 1</button>
+    <button onclick="window.location.href='level2.html'">Level 2</button>
+    <button onclick="window.location.href='level3.html'">Level 3</button>
+  </div>
+  <script>
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') {
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+
+</body>
+</html>
