@@ -44,11 +44,26 @@
     //   }
     // });
 <!--   </script> -->
-  <script>
+<!--   <script>
   const video = document.getElementById('levelVideo');
   video.addEventListener('ended', () => {
     // 显示 p5.js 的嵌入内容
     document.getElementById('p5-iframe-container').style.display = 'block';
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      window.history.back();
+    }
+  });
+</script> -->
+<script>
+  const video = document.getElementById('levelVideo');
+  const iframeContainer = document.getElementById('p5-iframe-container');
+
+  video.addEventListener('ended', () => {
+    video.style.display = 'none'; // 隐藏视频
+    iframeContainer.style.display = 'block'; // 显示 iframe
   });
 
   document.addEventListener('keydown', function (e) {
